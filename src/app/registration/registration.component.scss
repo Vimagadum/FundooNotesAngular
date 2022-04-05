@@ -1,0 +1,63 @@
+.Container{    
+    margin-top: 50px;
+    margin-left: 25%;
+    margin-right: 25%;
+    height: 100%;
+    width:50%;
+    border: 1px solid lightgrey;
+    border-radius: 10px;
+    padding:20px;
+    h1{
+        font-size: large;
+        background: -webkit-linear-gradient(rgb(247, 251, 14), rgb(250, 13, 13));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+    }
+    h3{
+        font-size: x-large;
+    }
+    .SubContainer{
+        display: flex;
+        justify-content: space-between;
+        .FormContainer{
+            display: flex; 
+            flex-direction: column;
+            .UserName{
+                display: flex;
+                gap: 20px;
+                .Info{
+                width: 150px;
+                }
+            }  
+            .EmailPart{
+                .Info{
+                    width: 320px;
+                }  
+            } 
+            .PassWordPart{
+               
+                display: flex;
+                flex-direction: row;
+                gap: 20px;
+                .Info{
+                    width: 150px;
+                }
+
+            }
+            .EndPart{
+                
+                margin-top: 50px;
+                display: flex;
+                justify-content: space-between;
+                .link{
+                    color: rgb(71, 71, 209);
+                }                
+            }  
+        }               
+        .ImagePart{
+        height: 100px;
+        width: 300px;
+        align-self: flex-start;        
+        }
+    }  
+}
