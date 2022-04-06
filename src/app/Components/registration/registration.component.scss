@@ -8,10 +8,25 @@
     border-radius: 10px;
     padding:20px;
     h1{
-        font-size: large;
-        background: -webkit-linear-gradient(rgb(247, 251, 14), rgb(250, 13, 13));
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
+        font-size: x-large;
+        .f{
+            color: blue;
+        }
+        .u{
+            color: rgb(251, 201, 51);
+        }
+        .n{
+            color: rgb(31, 252, 94);
+        }
+        .d{
+            color: rgb(247, 32, 32);
+        }
+        .o{
+            color: rgb(156, 225, 250);
+        }
+        .oo{
+            color: rgb(250, 54, 211);
+        }
     }
     h3{
         font-size: x-large;
@@ -41,8 +56,12 @@
                 gap: 20px;
                 .Info{
                     width: 150px;
+                    height: 60px;
                 }
 
+            }
+            p{
+                font-size: x-small;
             }
             .EndPart{
                 
@@ -55,9 +74,10 @@
             }  
         }               
         .ImagePart{
-        height: 100px;
-        width: 300px;
-        align-self: flex-start;        
+        height: 50px;
+        width: 210px;
+        align-self: flex-start;  
+        font-size: larger;      
         }
     }  
 }

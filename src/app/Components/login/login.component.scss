@@ -17,9 +17,24 @@
         align-items: center;
         h2{
             font-size: large;
-            background: -webkit-linear-gradient(rgb(247, 251, 14), rgb(250, 13, 13));
-                -webkit-background-clip: text;
-                -webkit-text-fill-color: transparent;
+            .f{
+                color: blue;
+            }
+            .u{
+                color: rgb(251, 201, 51);
+            }
+            .n{
+                color: rgb(31, 252, 94);
+            }
+            .d{
+                color: rgb(247, 32, 32);
+            }
+            .o{
+                color: rgb(156, 225, 250);
+            }
+            .oo{
+                color: rgb(250, 54, 211);
+            }
         }
         p{
             font-size:x-large;
@@ -41,6 +56,7 @@
         .PassWordPart{
             .Info{
                 width: 380px;
+                height: 60px;
             }
             a{
                 color: rgb(71, 71, 209); 
