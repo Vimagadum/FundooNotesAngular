@@ -9,6 +9,7 @@
     padding:20px;
     h1{
         font-size: x-large;
+        font-weight: 500;
         .f{
             color: blue;
         }
@@ -47,24 +48,23 @@
             .EmailPart{
                 .Info{
                     width: 320px;
+                    height: 70px;
                 }  
             } 
-            .PassWordPart{
-               
+            .PassWordPart{               
                 display: flex;
                 flex-direction: row;
                 gap: 20px;
                 .Info{
                     width: 150px;
-                    height: 60px;
+                    height: 70px;
                 }
 
             }
             p{
                 font-size: x-small;
             }
-            .EndPart{
-                
+            .EndPart{                
                 margin-top: 50px;
                 display: flex;
                 justify-content: space-between;
@@ -77,7 +77,10 @@
         height: 50px;
         width: 210px;
         align-self: flex-start;  
-        font-size: larger;      
+        font-size: larger; 
+        p{
+            text-align: center;
+        }     
         }
     }  
 }
