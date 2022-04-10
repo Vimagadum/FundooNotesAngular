@@ -1,12 +1,4 @@
-.Container{    
-    margin-top: 50px;
-    margin-left: 25%;
-    margin-right: 25%;
-    height: 100%;
-    width:50%;
-    border: 1px solid lightgrey;
-    border-radius: 10px;
-    padding:20px;
+.Head{
     h1{
         font-size: x-large;
         font-weight: 500;
@@ -32,55 +24,144 @@
     h3{
         font-size: x-large;
     }
-    .SubContainer{
-        display: flex;
-        justify-content: space-between;
-        .FormContainer{
-            display: flex; 
+}
+.EndPart{                
+    margin-top: 50px;
+    
+    .link{
+        color: rgb(71, 71, 209);
+    }   
+    button{
+        height: 40px;
+    }             
+} 
+.container-gt-md{
+    margin-top: 20px;
+    margin-left: 25%;
+    margin-right: 25%;
+    width: 50%;
+    border: 1px solid rgba(194, 192, 192, 0.76);
+    border-radius: 10px;
+    padding: 20px;
+    
+   
+    .subContainer-gt-md{
+
+        .form-content-gt-md{
+            display: flex;
             flex-direction: column;
             .UserName{
                 display: flex;
                 gap: 20px;
                 .Info{
-                width: 150px;
-                }
+                    width: 180px; 
+                } 
             }  
+            .PassWordPart{
+                display: flex;
+                gap: 20px;
+                height: 70px;
+                .Info{
+                    width: 180px;
+                } 
+               
+            }   
+            p{
+                font-size: 11px;
+                height: 10px;
+            } 
+            .EmailPart{
+                height: 70px;
+                .Info{
+                    width: 380px;
+                }
+            }
+            .user-current-email{
+                color: rgb(77, 77, 253);
+                padding-left: 2px;
+                text-align: start;
+            }
+            .example-margin{
+                margin-top: 13px;
+            }
+            
+           
+        }
+        .ImagePart{
+            height: 100px;
+            width: 40%;
+            align-self:flex-start;
+            p{
+                font-weight: lighter;
+                font-size: large;
+                text-align: center;
+            }
+        } 
+    } 
+}
+
+
+
+
+
+.container{
+    
+    margin-top: 20px;
+    margin-left: 15%;
+    margin-right: 15%;
+    width: 70%;
+    border: 1px solid rgba(194, 192, 192, 0.76);
+    border-radius: 10px;
+    padding: 20px;
+    .Head{
+        h1{
+            font-size:x-large;
+            font-weight:500;
+        }
+        h3{
+            margin-top: -15px;
+            font-size: x-large;
+        }
+    }
+   
+    .subContainer{
+        .form-content{
+            display: flex;
+            flex-direction: column;
+            .UserName{
+                display: flex;
+                flex-direction: column;
+                .Info{
+                    width: 100%; 
+                } 
+            }  
+            .PassWordPart{
+                display: flex;
+                flex-direction: column;
+                .Info{
+                    width: 100%;
+                } 
+            }   
+            p{
+                font-size: 13px;
+                height: 10px;
+            } 
             .EmailPart{
                 .Info{
-                    width: 320px;
-                    height: 70px;
-                }  
-            } 
-            .PassWordPart{               
-                display: flex;
-                flex-direction: row;
-                gap: 20px;
-                .Info{
-                    width: 150px;
-                    height: 70px;
+                    width: 100%;
                 }
-
             }
-            p{
-                font-size: x-small;
+            .user-current-email{
+                color: rgb(77, 77, 253);
+                padding-left: 2px;
+                text-align: start;
             }
-            .EndPart{                
-                margin-top: 50px;
-                display: flex;
-                justify-content: space-between;
-                .link{
-                    color: rgb(71, 71, 209);
-                }                
-            }  
-        }               
-        .ImagePart{
-        height: 50px;
-        width: 210px;
-        align-self: flex-start;  
-        font-size: larger; 
-        p{
-            text-align: center;
-        }     
+            .example-margin{
+                margin-top: 13px;
+            }
         }
-    }  
+        .ImagePart{
+            display: none;
+        }
+    } 
 }

@@ -36,12 +36,10 @@ export class RegistrationComponent implements OnInit {
       this.userservice.register(data).subscribe((res) => {
         console.log(res);
         
-      })
-      
+      })      
     }
     else{
-      console.log("invalid input");
-      
+      console.log("invalid input");      
     }
   }
 }

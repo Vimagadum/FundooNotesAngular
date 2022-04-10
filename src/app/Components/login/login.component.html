@@ -1,6 +1,6 @@
-<div class="Container">
-    <form [formGroup]="loginForm">
-    <div class="HeaderPart">
+<div class="Container" ngClass.lt-md="container-lt-md" fxLayout="column"  fxLayoutAlign="center center">
+    <form [formGroup]="loginForm" (ngSubmit)="onSubmit()" class="form-class">
+    <div class="HeaderPart" fxLayout="column"  fxLayoutAlign="center center">
         <h2>
             <span class="f">F</span>
             <span class="u">u</span>
@@ -13,7 +13,7 @@
         <p class="Description">Use Your Fundoo Account</p>
     </div>
    
-    <div class="Information">
+    <div class="Information" fxLayout="column"  fxLayoutAlign="center center">
         <div class="EmailPart">
             <mat-form-field class="Info" appearance="outline">
                 <mat-label>Enter Your Email</mat-label>
@@ -21,17 +21,17 @@
                 <mat-error>Enter valid Email</mat-error>
             </mat-form-field> 
         </div>
-        <div class="PassWordPart">
+        <div class="PassWordPart" fxLayout="column"  fxLayoutAlign="space-between">
             <mat-form-field class="Info" appearance="outline">
              <mat-label>Password</mat-label>
              <input matInput placeholder="Placeholder" formControlName="password">
              <mat-error>Enter valid Password</mat-error>
             </mat-form-field>
-            <a href="/forgetpassword" target="_blank">Forgot Password?</a>        
+            <a routerLink="/forgetpassword" target="_blank">Forgot Password?</a>        
         </div>
     
     </div>
-    <div class="EndPart">       
+    <div class="EndPart" fxLayout="row"  fxLayoutAlign="space-between center">       
         <a mat-button href="/register" target="_blank">Create Account</a>        
         <button mat-raised-button color="primary">Next</button>
     </div>  

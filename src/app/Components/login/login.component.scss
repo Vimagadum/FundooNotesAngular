@@ -1,76 +1,69 @@
-.Container{
+.HeaderPart{
     margin-top: 20px;
-    margin-left: 35%;
-    margin-right: 35%;
+    margin-bottom: 10px;
+    h2{
+        font-size: large;
+        .f{
+            color: blue;
+        }
+        .u{
+            color: rgb(251, 201, 51);
+        }
+        .n{
+            color: rgb(31, 252, 94);
+        }
+        .d{
+            color: rgb(247, 32, 32);
+        }
+        .o{
+            color: rgb(156, 225, 250);
+        }
+        .oo{
+            color: rgb(250, 54, 211);
+        }
+    }
+    p{
+        font-size:x-large;
+        
+    }
+    .Description{
+       font-size: medium;     
+    }
+}
+.EndPart{                
+    margin-top: 50px;
+    
+    a{
+        color: rgb(71, 71, 209);
+        padding: 2px;
+    }   
+    button{
+        background-color: blue;
+        color: white;
+    }             
+}  
+.container{
+    margin-top: 20px;
+    margin-left:30%;
+    margin-right: 30%;
     height: 80%;
-    width:30%;
-    border: 1px solid lightgrey;
-    border-radius: 10px;    
-    justify-content: center;
-    display: flex;
-    flex-direction: column;
-    padding: 20px;
-    .HeaderPart{
-        margin-top: -80px;
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        h2{
-            font-size: large;
-            .f{
-                color: blue;
-            }
-            .u{
-                color: rgb(251, 201, 51);
-            }
-            .n{
-                color: rgb(31, 252, 94);
-            }
-            .d{
-                color: rgb(247, 32, 32);
-            }
-            .o{
-                color: rgb(156, 225, 250);
-            }
-            .oo{
-                color: rgb(250, 54, 211);
-            }
-        }
-        p{
-            font-size:x-large;
-            
-        }
-        .Description{
-           font-size: medium;     
-        }
-    }    
-    .Information{
-        .EmailPart{
-            margin-top: 15px;
-            .Info{
-                width: 380px;
-            }
-        }
-    }
-    .Information{
-        .PassWordPart{
-            .Info{
-                width: 380px;
-                height: 70px;
-            }
-            a{
-                color: rgb(71, 71, 209); 
-               text-decoration: none;
-            }
-        }
-    }
-    .EndPart{                
-        margin-top: 50px;
-        display: flex;
-        justify-content: space-between;
-        a{
-            color: rgb(71, 71, 209);
-            padding: 2px;
-        }                
-    }  
+    width:40%;
+    border: 1px solid rgba(211, 211, 211, 0.651);
+    border-radius: 10px;
+    padding: 50px;  
+   
+  
+   
+}
+
+.container-lt-md{
+    margin-top: 20px;
+    margin-left:5%;
+    margin-right: 5%;
+    width:90%;
+    border: 1px solid rgba(211, 211, 211, 0.651);
+    border-radius: 10px;
+    padding: 50px;  
+   
+     
 }
