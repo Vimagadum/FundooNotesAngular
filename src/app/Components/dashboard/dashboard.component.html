@@ -35,7 +35,7 @@
       fixedTopGap="56"
     >
       <mat-nav-list class="nav-list">
-        <a mat-list-item routerLink="."
+        <a mat-list-item routerLink="notes"
           ><img src="../../../assets/lightbulb_black_24dp.svg" />Notes</a
         >
         <a mat-list-item routerLink="."
@@ -54,7 +54,7 @@
     </mat-sidenav>
 
     <mat-sidenav-content>
-      <p></p>
+      <p><router-outlet></router-outlet></p>
     </mat-sidenav-content>
   </mat-sidenav-container>
 </div>

@@ -1,0 +1,21 @@
+<mat-card #takenote class="matcard_wrraper" (click)="noteClick()">
+    <div class="title-pin" *ngIf="notelist">
+    <mat-card-title><input matInput placeholder="Title" [(ngModel)]="title"></mat-card-title>
+    <img class="icontop" src="../../../assets/push_pin_black_24dp.svg">
+    </div>
+    <input matInput placeholder="Take a note" [(ngModel)]="description">
+    <div class="formhead" *ngIf="!notelist" >
+      <img class="search_image" src="../../../assets/check_box_black_24dp.svg">
+      <img class="searchimage" src="../../../assets/brush_black_24dp.svg">
+      <img class="search_image" src="../../../assets/image_black_24dp.svg">
+    </div>
+    <div *ngIf="notelist">
+      
+    <div fxLayout="row" fxLayoutAlign="space-between">
+      <app-icons></app-icons>
+      <button class="close-button" mat-button (click)="noteClose()">close</button>
+  
+    </div>
+    
+    </div>
+</mat-card>

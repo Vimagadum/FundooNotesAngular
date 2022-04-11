@@ -28,8 +28,9 @@ onSubmit(){
       email:this.loginForm.value.email,
       password:this.loginForm.value.password
     }
-    this.userservice.login(data).subscribe((res) => {
+    this.userservice.login(data).subscribe((res:any) => {
       console.log(res);
+      localStorage.setItem('token',res.data)
       
     })
     
