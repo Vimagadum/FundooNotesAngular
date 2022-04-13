@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, EventEmitter, OnInit, Output } from '@angular/core';
+import { FormGroup, NgControl, NgForm, NgModelGroup } from '@angular/forms';
 import { NoteService } from 'src/app/service/noteService/note.service';
 
 @Component({
@@ -7,6 +8,7 @@ import { NoteService } from 'src/app/service/noteService/note.service';
   styleUrls: ['./takenote.component.scss']
 })
 export class TakenoteComponent implements OnInit {
+  takenote!:NgForm;
   public notelist :boolean=false;
   description:string = ""
   title:string=""
@@ -19,6 +21,7 @@ export class TakenoteComponent implements OnInit {
   createdAt:any="2022-04-11T11:27:12.305Z"
   modifiedAt:any="2022-04-11T11:27:12.305Z"
   constructor(private noteService: NoteService) { }
+  @Output() createToGetAllNotes = new EventEmitter<string>()
 
   ngOnInit(): void {
   }
@@ -31,6 +34,10 @@ export class TakenoteComponent implements OnInit {
     
     this.notelist = false
     console.log(this.title, this.description);
+    if((this.title==null||this.title=="") && (this.description==null||this.description=="")){
+      console.log("values are null");
+    }
+    else{
     let data={
       title: this.title,
       description:this.description,
@@ -45,6 +52,12 @@ export class TakenoteComponent implements OnInit {
     }
     this.noteService.createnote(data).subscribe((res:any)=>{
       console.log(res);
+      let data={
+        title:this.title,
+        description:this.description
+      }
+      this.createToGetAllNotes.emit("Hello")
     })
+  }
   }
 }

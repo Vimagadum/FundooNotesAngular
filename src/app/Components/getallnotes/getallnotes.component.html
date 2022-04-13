@@ -1,2 +1,2 @@
-<app-takenote></app-takenote>
-<app-displaynotes></app-displaynotes>
+<app-takenote (createToGetAllNotes)="receiveEvent($event)"></app-takenote>
+<app-displaynotes [childMessage]="notelist" ngClass="dispaynote-container" ngClass.gt-md="dispaynote-container-gt-md"></app-displaynotes>
