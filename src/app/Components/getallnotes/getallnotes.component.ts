@@ -17,11 +17,20 @@ export class GetallnotesComponent implements OnInit {
   getnote(){
     this.note.getnote().subscribe((res:any)=>{
       console.log(res.data);
-      this.notelist=res.data
+      this.notelist=res.data;
+      this.notelist.reverse();
       
     }) 
   }
   receiveEvent($event: any) {
+    this.getnote();
+  }
+  receiveMessagefromdisplaycard($event: any) {
+    console.log("insidegetallnotes");
+    this.getnote()
+  }
+  updatedData(value: any) {
+
     this.getnote();
   }
 }

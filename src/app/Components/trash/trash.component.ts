@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { Router } from '@angular/router';
+import { NoteService } from 'src/app/service/noteService/note.service';
 
 @Component({
   selector: 'app-trash',
@@ -7,9 +9,11 @@ import { Component, OnInit } from '@angular/core';
 })
 export class TrashComponent implements OnInit {
 
-  constructor() { }
+  constructor(private note:NoteService, private router:Router) { }
 
   ngOnInit(): void {
+        
   }
 
+  
 }

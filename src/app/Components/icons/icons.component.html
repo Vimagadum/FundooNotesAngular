@@ -9,9 +9,17 @@
     <img class="search_image" style="margin-right: 10px;
     height: 20px;" src="../../../assets/image_black_24dp.svg">
     <img class="search_image" style="margin-right: 10px;
-    height: 20px;" src="../../../assets/archive_black_24dp.svg">
-    <img class="search_image" style="margin-right: 10px;
-    height: 20px;" src="../../../assets/more_vert_black_24dp.svg">
+    height: 20px;" src="../../../assets/archive_black_24dp.svg" (click)="onArchive()">
+    
 
+    <button mat-icon-button [matMenuTriggerFor]="menu">
+      <img class="search_image" style="margin-right: 10px;
+            height: 20px;" src="../../../assets/more_vert_black_24dp.svg" alt="">
+        </button>
 
+        <mat-menu #menu="matMenu">
+            <button mat-menu-item class="matMenu" (click)="trash()">
+                <span>Delete note</span>
+            </button>
+        </mat-menu>
   </div>

@@ -22,4 +22,8 @@ export class HttpService {
  putService(url:string, data:any, token:boolean=false, httpOptions:any){
   return this.http.put(url, data, token && httpOptions)
 }
+
+deleteService(url:string, data:any, token:boolean=false, httpOptions:any){
+  return this.http.put(url, data, token && httpOptions)
+}
 }

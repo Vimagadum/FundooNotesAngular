@@ -26,6 +26,12 @@ import { GetallnotesComponent } from './Components/getallnotes/getallnotes.compo
 import { DisplaynotesComponent } from './Components/displaynotes/displaynotes.component';
 import { IconsComponent } from './Components/icons/icons.component';
 import {MatCardModule} from '@angular/material/card';
+import { UpdateComponent } from './Components/update/update.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import { ArchiveComponent } from './Components/archive/archive.component';
+import {MatMenuModule} from '@angular/material/menu';
+
+
 
 @NgModule({
   declarations: [
@@ -39,6 +45,8 @@ import {MatCardModule} from '@angular/material/card';
     GetallnotesComponent,
     DisplaynotesComponent,
     IconsComponent,
+    UpdateComponent,
+    ArchiveComponent,
   ],
   imports: [
     BrowserModule,
@@ -56,7 +64,9 @@ import {MatCardModule} from '@angular/material/card';
     MatIconModule,
     MatListModule,
     MatCardModule,
-    FormsModule
+    FormsModule,
+    MatDialogModule,
+    MatMenuModule
   ],
   providers: [],
   bootstrap: [AppComponent]

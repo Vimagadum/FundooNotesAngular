@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="text-Title">
+        <input matInput [(ngModel)]="Title">
+    </div>
+    <div class="text-Description">
+        <input matInput [(ngModel)]="Description">
+    </div>
+    <div class="icons-class" fxLayout="row" fxLayoutAlign="space-between end">
+        <div>
+            <app-icons ></app-icons>
+        </div>
+        <div class="close">
+            <button mat-icon-button (click)="onClose()" style="opacity: 0.9;">
+                Close
+            </button>
+        </div>
+    
+    </div>
+    
+</div>
