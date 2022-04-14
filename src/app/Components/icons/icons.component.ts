@@ -15,12 +15,12 @@ export class IconsComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.noteId=[this.noteObject.notesId]
+    
   }
 
   trash() {
     console.log('deleted');
-
+    this.noteId=[this.noteObject.notesId]
     this.note.trashnotes(this.noteId).subscribe((res:any) => {
       console.log(res);
       this.iconstodisplay.emit(res)
@@ -31,7 +31,7 @@ export class IconsComponent implements OnInit {
   onArchive(){
     
     console.log('Archived');
-
+    this.noteId=[this.noteObject.notesId]
     this.note.archiveNoteService(this.noteId).subscribe((res:any) =>{
       console.log(res);
       this.iconstodisplay.emit(res) 

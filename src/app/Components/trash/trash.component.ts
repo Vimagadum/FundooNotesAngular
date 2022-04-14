@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { Router } from '@angular/router';
+import { MatDialog } from '@angular/material/dialog';
 import { NoteService } from 'src/app/service/noteService/note.service';
 
 @Component({
@@ -9,11 +9,31 @@ import { NoteService } from 'src/app/service/noteService/note.service';
 })
 export class TrashComponent implements OnInit {
 
-  constructor(private note:NoteService, private router:Router) { }
+  trashArray : any;
+
+  constructor(public dialog: MatDialog, private note: NoteService) { }
 
   ngOnInit(): void {
-        
+    this.getTrashArray();
+  }
+  getTrashArray(){
+    this.note.getnote().subscribe((res: any) => {
+      console.log(res.data);
+       this.trashArray=res.data
+       this.trashArray = res.data.filter((object: any) => {
+        return object.isTrash === true;
+      })
+     
+    })
+
+    }
+    receiveMessagefromdisplaycard($event: any) {
+      console.log("", $event);
+      this.getTrashArray();
+
   }
 
   
+  
 }
+

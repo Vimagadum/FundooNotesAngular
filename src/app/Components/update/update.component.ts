@@ -41,9 +41,6 @@ export class UpdateComponent implements OnInit {
        
     })
     this.dialogRef.close()
-    
 
   }
-
-
 }

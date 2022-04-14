@@ -19,7 +19,11 @@ export class GetallnotesComponent implements OnInit {
       console.log(res.data);
       this.notelist=res.data;
       this.notelist.reverse();
+      this.notelist=this.notelist.filter((object:any)=>{
+        return object.isArchive===false && object.isTrash===false
       
+      })
+      console.log(this.notelist);
     }) 
   }
   receiveEvent($event: any) {
