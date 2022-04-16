@@ -68,5 +68,16 @@ archiveNoteService(id:any){
   }
   return this.httpservice.putService("https://localhost:44308/api/Notes/IsArchive/"+id,{},true,headersOption)
 }
+ColorNote(id:any, data:any){
+
+  let headersOption = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      'Authorization': `Bearer  ${this.token}`		
+    })
+
+  }
+  return this.httpservice.putService("https://localhost:44308/api/Notes/colour/"+id,data,true,headersOption)
+}
 
 }

@@ -41,22 +41,21 @@ export class TakenoteComponent implements OnInit {
     let data={
       title: this.title,
       description:this.description,
-      reminder: this.reminder,
-      color: this.color,
+      remainder: this.reminder,
+      colour: this.color,
       image: this.image,
       isTrash: this.istrash,
       isArchive: this.isarchive,
-      isPinned: this.ispin,
+      isPinn: this.ispin,
       createdAt: this.createdAt,
-      modifiedAt: this.modifiedAt
+      modifierAt: this.modifiedAt
     }
     this.noteService.createnote(data).subscribe((res:any)=>{
-      console.log(res);
-      let data={
-        title:this.title,
-        description:this.description
-      }
-      this.createToGetAllNotes.emit("Hello")
+      console.log(res);   
+      this.title="";
+      this.description="";   
+      this.createToGetAllNotes.emit(res)
+      
     })
   }
   }

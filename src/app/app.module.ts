@@ -31,6 +31,7 @@ import {MatDialogModule} from '@angular/material/dialog';
 import { ArchiveComponent } from './Components/archive/archive.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { TrashComponent } from './Components/trash/trash.component';
+import { AuthguardserviceService } from './authguardservice.service';
 
 
 
@@ -70,7 +71,10 @@ import { TrashComponent } from './Components/trash/trash.component';
     MatDialogModule,
     MatMenuModule
   ],
-  providers: [],
+  providers: [
+
+    AuthguardserviceService,
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
