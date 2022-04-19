@@ -1,6 +1,7 @@
 import {MediaMatcher} from '@angular/cdk/layout';
 import {ChangeDetectorRef, Component, OnDestroy} from '@angular/core';
 import { Router } from '@angular/router';
+import { DataService } from 'src/app/service/DataService/data.service';
 
 @Component({
   selector: 'app-dashboard',
@@ -9,6 +10,7 @@ import { Router } from '@angular/router';
 })
 export class DashboardComponent implements OnDestroy {
   mobileQuery: MediaQueryList;
+  isGrid: boolean=false;
 
   fillerNav = Array.from({length: 50}, (_, i) => `Nav Item ${i + 1}`);
 
@@ -24,7 +26,7 @@ export class DashboardComponent implements OnDestroy {
 
   private _mobileQueryListener: () => void;
 
-  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router:Router) {
+  constructor(changeDetectorRef: ChangeDetectorRef, media: MediaMatcher, private router:Router, private dataservice:DataService) {
     this.mobileQuery = media.matchMedia('(max-width: 600px)');
     this._mobileQueryListener = () => changeDetectorRef.detectChanges();
     this.mobileQuery.addListener(this._mobileQueryListener);
@@ -37,4 +39,30 @@ export class DashboardComponent implements OnDestroy {
     localStorage.removeItem("token");
     this.router.navigateByUrl('/login')
   }
+
+
+  listview(){
+      this.isGrid=false;
+      this.dataservice.updateData1(this.viewFun().valueOf());
+      console.log("function",this.viewFun());
+      console.log("grid",this.isGrid);
+    }
+  
+    gridview(){
+      this.isGrid=true
+      this.dataservice.updateData1(this.viewFun().valueOf());
+      console.log("function",this.viewFun());
+      console.log("grid",this.isGrid);
+    }
+    changeFormat: boolean=false
+    viewFun(){
+      if(this.changeFormat == false){
+        this.changeFormat=true
+        return this.changeFormat
+      }
+      else{
+        this.changeFormat=false
+        return this.changeFormat
+      }
+    }
 }

@@ -1,2 +1,2 @@
 <app-takenote (createToGetAllNotes)="receiveEvent($event)"></app-takenote>
-<app-displaynotes [childMessage]="notelist" ngClass="dispaynote-container" (noteUpdated)="updatedData($event)" (displaytogetallnotes)="receiveMessagefromdisplaycard($event)" ngClass.gt-md="dispaynote-container-gt-md"></app-displaynotes>
+<app-displaynotes [childMessage]="notelist" ngClass="dispaynote-container" (noteUpdated)="updatedData($event)" (displaytogetallnotes)="receiveMessagefromdisplaycard($event)" [class.formatStyle]="format"></app-displaynotes>
