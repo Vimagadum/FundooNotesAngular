@@ -33,7 +33,7 @@
 			matTooltipClass="tooltip">
 			<img class="icons" src="./../../../assets/delete_forever_black_24dp.svg" alt="delete_forever">
 		</button>
-        <button mat-icon-button  *ngIf="isDeleted" matTooltip="Delete forever"
+        <button mat-icon-button (click)="trash()" *ngIf="isDeleted" matTooltip="Delete forever"
         matTooltipClass="tooltip">
         <img class="icons" src="./../../../assets/restore_from_trash_black_24dp.svg" alt="delete_forever">
         </button>
