@@ -1,4 +1,4 @@
-<div class="container">
+<div [style.background]="data.colour">
     <div class="text-Title">
         <input matInput [(ngModel)]="Title">
     </div>
@@ -7,7 +7,7 @@
     </div>
     <div class="icons-class" fxLayout="row" fxLayoutAlign="space-between end">
         <div>
-            <app-icons ></app-icons>
+            <app-icons [noteObject]="data" (iconstodisplay)="receiveMessage($event)"></app-icons>
         </div>
         <div class="close">
             <button mat-icon-button (click)="onClose()" style="opacity: 0.9;">

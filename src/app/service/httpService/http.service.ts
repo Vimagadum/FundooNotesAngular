@@ -23,7 +23,7 @@ export class HttpService {
   return this.http.put(url, data, token && httpOptions)
 }
 
-deleteService(url:string, data:any, token:boolean=false, httpOptions:any){
-  return this.http.put(url, data, token && httpOptions)
+deleteService(url:string, token:boolean=false, httpOptions:any){
+  return this.http.delete(url, token && httpOptions)
 }
 }

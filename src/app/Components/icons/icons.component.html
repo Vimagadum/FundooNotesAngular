@@ -1,11 +1,11 @@
 <div class="icongroup">
   
     <img class="search_image" style="margin-right: 10px;
-    height: 20px;" src="../../../assets/add_alert_black_24dp.svg">
+    height: 20px;" src="../../../assets/add_alert_black_24dp.svg" *ngIf="!isDeleted">
     <img class="search_image" style="margin-right: 10px;
-    height: 20px;" src="../../../assets/person_add_alt_black_24dp.svg">
+    height: 20px;" src="../../../assets/person_add_alt_black_24dp.svg" *ngIf="!isDeleted">
     <img class="search_image" style="margin-right: 10px;
-    height: 20px;" src="../../../assets/palette_black_24dp.svg" [matMenuTriggerFor]="aboveMenu">
+    height: 20px;" src="../../../assets/palette_black_24dp.svg" [matMenuTriggerFor]="aboveMenu" *ngIf="!isDeleted">
     <mat-menu #aboveMenu="matMenu" yPosition="below">
         <div class="pop" style="display: flex; flex-flow: row wrap; width: 110px;">
             <div *ngFor='let color of colorarray'>
@@ -16,18 +16,25 @@
         </div>
     </mat-menu> 
     <img class="search_image" style="margin-right: 10px;
-    height: 20px;" src="../../../assets/image_black_24dp.svg">
+    height: 20px;" src="../../../assets/image_black_24dp.svg" *ngIf="!isDeleted">
     <img class="search_image" style="margin-right: 10px;
-    height: 20px;" src="../../../assets/archive_black_24dp.svg" (click)="onArchive()">
-    
+    height: 20px;" src="../../../assets/archive_black_24dp.svg" *ngIf="!isArchived && !isDeleted" (click)="onArchive()">
+    <img class="search_image" style="margin-right: 10px;
+    height: 20px;" src="../../../assets/unarchive_black_24dp.svg"  *ngIf="isArchived && !isDeleted" (click)="onArchive()">
 
       <img class="search_image" style="margin-right: 10px;
-            height: 20px;" src="../../../assets/more_vert_black_24dp.svg" alt="" [matMenuTriggerFor]="menu">
+            height: 20px;" src="../../../assets/more_vert_black_24dp.svg" *ngIf="!isDeleted" [matMenuTriggerFor]="menu">
         
 
         <mat-menu #menu="matMenu">
-            <button mat-menu-item class="matMenu" (click)="trash()">
-                <span>Delete note</span>
-            </button>
+            <button mat-menu-item (click)="trash()">Delete note</button>  
         </mat-menu>
+        <button mat-icon-button (click)='onDeleteForever()'  *ngIf="isDeleted" matTooltip="Delete forever"
+			matTooltipClass="tooltip">
+			<img class="icons" src="./../../../assets/delete_forever_black_24dp.svg" alt="delete_forever">
+		</button>
+        <button mat-icon-button  *ngIf="isDeleted" matTooltip="Delete forever"
+        matTooltipClass="tooltip">
+        <img class="icons" src="./../../../assets/restore_from_trash_black_24dp.svg" alt="delete_forever">
+        </button>
   </div>

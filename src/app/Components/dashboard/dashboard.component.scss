@@ -37,6 +37,11 @@ h1.example-app-name {
   border-bottom: 1px solid #e0babab9;
   background-color: #fff;
 }
+.example-toolbar-lt-lg{
+  display: flex;
+  border-bottom: 1px solid #e0babab9;
+  background-color: #fff;
+}
 .menu-icon{
   color: #000;
 }
@@ -52,8 +57,8 @@ h1.example-app-name {
   
 }
 
-.search-box{
-  
+.search-box-gt-md{
+    
   display: flex;
   justify-content: start;
   align-items: center;
@@ -87,6 +92,24 @@ h1.example-app-name {
   }
   
 }
+.listmenuIcon-lt-md{
+  display: none;
+}
+.right-icons-lt-lg{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  margin-left: 10px;
+  :hover{
+    background-color: #f1f3f4;
+    border-radius: 50%;
+  }
+  img{
+    margin-right:3px;
+    padding: 8px;
+  }
+}
 .menu{
   display: flex;
   justify-content: center;
@@ -117,7 +140,12 @@ h1.example-app-name {
     margin-right: 30px;
   }
 }
-.content-container{
-  height: 100%;
-  width: 100%;
+.search-box-lt-lg{
+  display: flex;
+  margin-left: 3px;
+  align-items: center;
+  input{
+
+    display: none;
+  }
 }

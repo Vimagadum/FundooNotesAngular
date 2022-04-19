@@ -79,5 +79,14 @@ ColorNote(id:any, data:any){
   }
   return this.httpservice.putService("https://localhost:44308/api/Notes/colour/"+id,data,true,headersOption)
 }
+deleteNote(id:any){
+  let headersOption = {
+    headers: new HttpHeaders({
+      'Content-type': 'application/json',
+      'Authorization': `Bearer  ${this.token}`		
+    })
+  }
+  return this.httpservice.deleteService('https://localhost:44308/api/Notes/Delete/'+id, true, headersOption)
+}
 
 }

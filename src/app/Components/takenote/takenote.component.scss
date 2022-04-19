@@ -1,51 +1,43 @@
-.Container{
-    height: 8%;
-    border-radius: 10px;
-    display: flex;
-    align-items: center;
-    flex-direction: row;
-    width: 500px;
-    margin: 40px auto;
-    padding: 0 20px 20px 20px;
-    border: 2px solid #f5f5f5;
-    }
-    .formhead{    margin-left: 350px;
-        margin-top: -27px;
-    }
-    .icontop{
-        margin-left: 458px;
-        margin-top: -22px;
-        margin-bottom: 4px
-    }
-    .matcard_wrraper{
-        width: 500px;
-        /* margin-bottom: -22px; */
-        margin-left: 426px;
-        margin-top: 83px;
-    }
- .search_image{
-    padding: 5px;
-    margin-right: 10px;
- }
- .searchimage{
-    padding: 5px;
-    margin-right: 10px;
- }
- .close-button{
-    text-align: end;
+.matcard_wrraper{
+    width: 600px;
+    /* margin-bottom: -22px; */
+    margin-left: 426px;
+    margin-top: 83px;
+}
+.matcard_wrraper-lt-lg{
+    width: 300px;
+    /* margin-bottom: -22px; */
+    margin-left: 50px;
+    margin-top: 10px;
+}
+.search_image{
+padding: 5px;
+margin-right: 10px;
+}
+.close-button{
+ text-align: end;
 }
 input{
-   background-color: transparent;
-   border: none;
-   outline-style: none;
+background-color: transparent;
+border: none;
+outline-style: none;
+line-height: 30px;
+
+}
+.takenotefield{
+display: flex;
+justify-content: space-between;
+}
+.formhead{
+ display: flex;
+ justify-content: space-between;
 }
 .title-pin{
-    width: fit-content;
-   
-}
-.icons{
-    margin-top: 20px;
+ width: fit-content;
+ display: flex;justify-content: space-between;
+
+ 
 }
 .takenote-icons{
-    margin-top: 10px;
+ margin-top: 20px;
 }

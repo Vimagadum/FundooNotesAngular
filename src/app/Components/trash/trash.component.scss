@@ -1,8 +1,11 @@
-.flexbox{
+.displaynote-container{
     display: flex;
-    flex-wrap:wrap;
+    flex-direction: column;
+
+    
 }
-.trash{
-    margin-top: 20px;
-    margin-left: 150px;
+.dispaynote-container-gt-md{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
