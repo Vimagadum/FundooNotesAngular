@@ -9,6 +9,7 @@ import { UserService } from 'src/app/service/userService/user.service';
   styleUrls: ['./registration.component.scss']
 })
 export class RegistrationComponent implements OnInit {
+  hide: boolean = true;
   registerForm!:FormGroup;
   constructor(private formBuilder: FormBuilder,private userservice:UserService) { }
 
@@ -42,4 +43,7 @@ export class RegistrationComponent implements OnInit {
       console.log("invalid input");      
     }
   }
+  showPassword() {
+    this.hide = !this.hide;
+ }
 }
