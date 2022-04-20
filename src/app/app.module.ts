@@ -32,6 +32,7 @@ import { ArchiveComponent } from './Components/archive/archive.component';
 import {MatMenuModule} from '@angular/material/menu';
 import { TrashComponent } from './Components/trash/trash.component';
 import { AuthguardserviceService } from './authguardservice.service';
+import { SearchPipe } from './Pipes/search.pipe';
 
 
 
@@ -49,7 +50,8 @@ import { AuthguardserviceService } from './authguardservice.service';
     IconsComponent,
     UpdateComponent,
     ArchiveComponent,
-    TrashComponent
+    TrashComponent,
+    SearchPipe
   ],
   imports: [
     BrowserModule,

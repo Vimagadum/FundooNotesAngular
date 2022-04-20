@@ -65,4 +65,7 @@ export class DashboardComponent implements OnDestroy {
         return this.changeFormat
       }
     }
+    recieveSearchmsg(stringData:any){
+      this.dataservice.updateData2(stringData.target.value);
+    }
 }

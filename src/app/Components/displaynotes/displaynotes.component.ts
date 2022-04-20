@@ -11,12 +11,15 @@ import { UpdateComponent } from '../update/update.component';
 export class DisplaynotesComponent implements OnInit {
   sentmsg: any;
   format: any;
+  noteName = "";
   @Input() childMessage:any;
   @Output() noteUpdated = new EventEmitter<any>();
   @Output() displaytogetallnotes=new EventEmitter<string>();
 
   constructor(public dialog: MatDialog,private dataservice:DataService) { }
   ngOnInit(): void {
+    this.dataservice.stored2.subscribe(x => this.noteName=x)
+
     this.dataservice.stored.subscribe(x => this.format=x)
   }
   openDialog(note:any): void {    
