@@ -33,6 +33,7 @@ import {MatMenuModule} from '@angular/material/menu';
 import { TrashComponent } from './Components/trash/trash.component';
 import { AuthguardserviceService } from './authguardservice.service';
 import { SearchPipe } from './Pipes/search.pipe';
+import { CollabComponent } from './Components/collab/collab.component';
 
 
 
@@ -51,7 +52,8 @@ import { SearchPipe } from './Pipes/search.pipe';
     UpdateComponent,
     ArchiveComponent,
     TrashComponent,
-    SearchPipe
+    SearchPipe,
+    CollabComponent
   ],
   imports: [
     BrowserModule,

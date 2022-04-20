@@ -3,7 +3,7 @@
     <img class="search_image" style="margin-right: 10px;
     height: 20px;" src="../../../assets/add_alert_black_24dp.svg" *ngIf="!isDeleted">
     <img class="search_image" style="margin-right: 10px;
-    height: 20px;" src="../../../assets/person_add_alt_black_24dp.svg" *ngIf="!isDeleted">
+    height: 20px;" src="../../../assets/person_add_alt_black_24dp.svg" *ngIf="!isDeleted" (click)="collabPerson('collab')">
     <img class="search_image" style="margin-right: 10px;
     height: 20px;" src="../../../assets/palette_black_24dp.svg" [matMenuTriggerFor]="aboveMenu" *ngIf="!isDeleted">
     <mat-menu #aboveMenu="matMenu" yPosition="below">

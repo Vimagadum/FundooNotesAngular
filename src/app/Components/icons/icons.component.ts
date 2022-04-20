@@ -3,6 +3,8 @@ import { NoteService } from 'src/app/service/noteService/note.service';
 import { ActivatedRoute } from '@angular/router';
 import { ArchiveComponent } from '../archive/archive.component';
 import { TrashComponent } from '../trash/trash.component';
+import { CollabComponent } from '../collab/collab.component';
+import { MatDialog } from '@angular/material/dialog';
 
 @Component({
   selector: 'app-icons',
@@ -18,7 +20,7 @@ export class IconsComponent implements OnInit {
   isDeleted: boolean = false
   isArchived: boolean = false
   colorarray = ['red', 'green', 'black', 'orange', 'blue', 'pink', 'yellow', 'silver','gold'];
-  constructor(private note: NoteService, private activatedroute: ActivatedRoute) { 
+  constructor(private note: NoteService, private activatedroute: ActivatedRoute, private dialog:MatDialog) { 
     
   }
 
@@ -77,5 +79,16 @@ export class IconsComponent implements OnInit {
       this.iconstodisplay.emit(Color)
 
   })
+}
+collabPerson(collab:any): void {
+  const dialogRef = this.dialog.open(CollabComponent, {
+   width: '450px',
+   panelClass: 'my-custom-dialog-class',
+   data:collab
+   });
+   dialogRef.afterClosed().subscribe(result => {
+   console.log('The dialog was closed'); 
+    
+   });
 }
 }

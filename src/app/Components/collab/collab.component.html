@@ -1,0 +1,39 @@
+<div  style="padding: 10px;" fxLayout="column" fxLayoutAlign="space-between">
+    <div class="Title">
+        <h1>Collaborators</h1>
+    </div>
+    <div class="collab-class" fxLayout="column" fxLayoutAlign="start">
+
+        <div fxLayout="row" fxLayoutAlign="start center">
+            
+                <img src="../../../assets/person_black_24dp.svg" alt="">
+           
+            <div ngClass="owner-details" fxLayout="column">
+                <h2>user name</h2>
+                <p>user email</p>
+            </div>
+        </div>
+
+        <div fxLayout="row" fxLayoutAlign="start center">
+                <img src="../../../assets/collab.svg" alt="">
+            <div ngClass="collaborator-details" fxLayout="column">
+                <h2>collaborator name</h2>
+                <input matInput placeholder="Enter Collaborator Email" type="email" style="outline-style: none; border: none; background-color: transparent;">
+            </div>
+        </div>
+    </div>
+        
+</div>
+<div ngClass="collaborator-end" fxLayout="row" fxLayoutAlign="end center" style="background-color: rgba(240, 236, 236, 0.9); height: 70px; margin-top: 50px;">
+    <div>
+        <button mat-icon-button (click)="CancelCollaborator()" style="opacity: 0.9; width: 60px; border-radius: 10px;">
+            cancel
+        </button>
+    </div>
+    <div >
+        <button mat-icon-button (click)="AddCollaborator()" style="opacity: 0.9;  width: 60px; border-radius: 10px; margin-left: 40px; margin-right: 20px;">
+            Close
+        </button>
+    </div>
+
+</div>
