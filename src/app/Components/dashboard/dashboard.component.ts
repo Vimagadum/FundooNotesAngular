@@ -43,19 +43,19 @@ export class DashboardComponent implements OnDestroy {
 
   listview(){
       this.isGrid=false;
-      this.dataservice.updateData1(this.viewFun().valueOf());
-      console.log("function",this.viewFun());
+      this.dataservice.updateData1(this.view().valueOf());
+      console.log("function",this.view());
       console.log("grid",this.isGrid);
     }
   
     gridview(){
       this.isGrid=true
-      this.dataservice.updateData1(this.viewFun().valueOf());
-      console.log("function",this.viewFun());
+      this.dataservice.updateData1(this.view().valueOf());
+      console.log("function",this.view());
       console.log("grid",this.isGrid);
     }
     changeFormat: boolean=false
-    viewFun(){
+    view(){
       if(this.changeFormat == false){
         this.changeFormat=true
         return this.changeFormat

@@ -5,13 +5,13 @@ import { Subject } from 'rxjs';
   providedIn: 'root'
 })
 export class DataService {
-  private info1 = new Subject<any>();
-  public store1 = this.info1.asObservable();
+  private information = new Subject<any>();
+  public stored = this.information.asObservable();
   
   constructor() { 
 
   }
   updateData1(text:any){
-    this.info1.next(text);
+    this.information.next(text);
   }
 }

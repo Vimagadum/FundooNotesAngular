@@ -17,7 +17,7 @@ export class DisplaynotesComponent implements OnInit {
 
   constructor(public dialog: MatDialog,private dataservice:DataService) { }
   ngOnInit(): void {
-    this.dataservice.store1.subscribe(x => this.format=x)
+    this.dataservice.stored.subscribe(x => this.format=x)
   }
   openDialog(note:any): void {    
     const dialogRef = this.dialog.open(UpdateComponent, {
