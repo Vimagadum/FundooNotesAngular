@@ -37,6 +37,8 @@ export class DashboardComponent implements OnDestroy {
   }
   logout(){
     localStorage.removeItem("token");
+    localStorage.removeItem("");
+    localStorage.clear();
     this.router.navigateByUrl('/login')
   }
 

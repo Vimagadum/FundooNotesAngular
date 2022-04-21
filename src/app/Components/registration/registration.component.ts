@@ -36,7 +36,9 @@ export class RegistrationComponent implements OnInit {
       }
       this.userservice.register(data).subscribe((res) => {
         console.log(res);
-        
+        localStorage.setItem('first',JSON.stringify(this.registerForm.value.firstName) )
+        localStorage.setItem('last',JSON.stringify(this.registerForm.value.lastName) )
+
       })      
     }
     else{

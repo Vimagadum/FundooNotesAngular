@@ -9,8 +9,8 @@
                 <img src="../../../assets/person_black_24dp.svg" alt="">
            
             <div ngClass="owner-details" fxLayout="column">
-                <h2>user name</h2>
-                <p>user email</p>
+                <span>{{firstName}} {{lastname}}</span>
+                <span>{{email}}</span>
             </div>
         </div>
 
@@ -18,7 +18,7 @@
                 <img src="../../../assets/collab.svg" alt="">
             <div ngClass="collaborator-details" fxLayout="column">
                 <h2>collaborator name</h2>
-                <input matInput placeholder="Enter Collaborator Email" type="email" style="outline-style: none; border: none; background-color: transparent;">
+                <input matInput placeholder="Enter Collaborator Email" type="email" style="outline-style: none; border: none; background-color: transparent;" [(ngModel)]="CollabEmail">
             </div>
         </div>
     </div>

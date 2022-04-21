@@ -32,6 +32,10 @@ onSubmit(){
     this.userservice.login(data).subscribe((res:any) => {
       console.log(res);
       localStorage.setItem('token',res.data)
+      localStorage.setItem('email',JSON.stringify(this.loginForm.value.email) )
+      
+
+
       this.router.navigateByUrl("/dashboard/notes");
     })
     

@@ -88,5 +88,14 @@ deleteNote(id:any){
   }
   return this.httpservice.deleteService('https://localhost:44308/api/Notes/Delete/'+id, true, headersOption)
 }
+addCollabService(body: any,noteId:any) {
+  let header = {
+    headers:new HttpHeaders({
+      'Content-type':'application/json',
+      'Authorization': `Bearer  ${this.token}`
+    })
+}
+  return this.httpservice.postService("https://localhost:44308/api/Collab/Add/"+ noteId, body, true, header);
+}
 
 }
