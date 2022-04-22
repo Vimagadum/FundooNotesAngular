@@ -25,4 +25,8 @@ describe('ArchiveComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('archive',()=>{
+    component.getArchiveArray()
+    expect(component.getArchiveArray).toBeTruthy();
+  });
 });
