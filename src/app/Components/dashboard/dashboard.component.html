@@ -1,30 +1,30 @@
 <div class="example-container" [class.example-is-mobile]="mobileQuery.matches">
-  <mat-toolbar color="primary" class="example-toolbar" ngClass.lt-lg="example-toolbar-lt-lg">
-    <div class="keep-icon">
-      <button mat-icon-button (click)="snav.toggle()">
+  <mat-toolbar class="example-toolbar" >
+    <div ngClass.xs="menu-xs" fxLayout="row" fxLayout.xs="row" fxLayout.xs="10">
+      <button mat-icon-button (click)="snav.toggle()" class="menu_button">
         <mat-icon class="menu-icon">menu</mat-icon>
       </button>
-      <img class="image" src="../../../assets/keep-image.png" />
-      <h1 class="example-app-name">Fundoo</h1>
+      <img class="keep_image" fxLayout="row" fxHide.xs="true" fxHide.sm="true" src="../../../assets/keep-image.png" />
+      <h1 fxLayout="row" fxLayout.xs="row" class="example-app-name">Fundoo</h1>
     </div>
 
-    <div ngClass.gt-md="search-box-gt-md" ngClass.lt-lg="search-box-lt-lg">
+    <div class="div_wrraper" ngClass.xs="div_wrraper-xs" ngClass.md="div_wrraper-md" ngClass.sm="div_wrraper-sm">
       <img src="../../../assets/search_black_24dp.svg" />
-      <input (keyup)="recieveSearchmsg($event)" matInput placeholder="search" />
+      <input type="text" class="searchfrom" autocomplete="off" (keyup)="recieveSearchmsg($event)" matInput placeholder="search" />
     </div>
 
-    <div ngClass="right-icons" ngClass.lt-lg="right-icons-lt-lg">
-      <img src="../../../assets/refresh_black_24dp.svg" />
+    <div class="image_wrraper" ngClass.sm="list-sm">
+      <img fxHide.xs="true" fxHide.sm="true" src="../../../assets/refresh_black_24dp.svg" />
       
-        <img ngClass.lt-md="listmenuIcon-lt-md" *ngIf="!isGrid" (click)="gridview();view()" src="../../../assets/dns_black_24dp.svg" />
+        <img  ngClass.xs="list-xs" ngClass.sm="list-sm" style="margin-left: 23px" *ngIf="!isGrid" (click)="gridview();view()" src="../../../assets/dns_black_24dp.svg" />
      
-        <img ngClass.lt-md="gridmenuIcon-lt-md" *ngIf="isGrid" (click)="listview();view()" src="../../../assets/grid_view_black_24dp.svg" />
+        <img ngClass.xs="list-xs" ngClass.sm="list-sm" style="margin-left: 23px" *ngIf="isGrid" (click)="listview();view()" src="../../../assets/grid_view_black_24dp.svg" />
       
-      <img src="../../../assets/settings_black_24dp.svg" />
+      <img fxHide.xs="true" fxHide.sm="true" style="margin-left: 23px" src="../../../assets/settings_black_24dp.svg" />
     </div>
-    <div class="menu">
-      <img src="../../../assets/apps_black_24dp.svg" />
-      <img src="../../../assets/person_black_24dp.svg" (click)="logout()" />
+    <div class="toolbar_image" fxLayout="row">
+      <img fxHide.xs="true" fxHide.sm="true" src="../../../assets/apps_black_24dp.svg" />
+      <img ngClass.xs="toolbar_image_xs" ngClass.sm="toolbar_image_sm" style="margin-left: 21px; cursor: pointer;" src="../../../assets/person_black_24dp.svg" (click)="logout()" />
     </div>
   </mat-toolbar>
 
@@ -37,6 +37,7 @@
       [mode]="mobileQuery.matches ? 'over' : 'side'"
       [fixedInViewport]="mobileQuery.matches"
       fixedTopGap="56"
+      class="mat_sideber"
     >
       <mat-nav-list class="nav-list">
         <a mat-list-item routerLink="notes"

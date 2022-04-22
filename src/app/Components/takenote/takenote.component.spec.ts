@@ -1,3 +1,4 @@
+import { HttpClientModule } from '@angular/common/http';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { TakenoteComponent } from './takenote.component';
@@ -8,7 +9,8 @@ describe('TakenoteComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ TakenoteComponent ]
+      declarations: [ TakenoteComponent ],
+      imports:[HttpClientModule]
     })
     .compileComponents();
   });

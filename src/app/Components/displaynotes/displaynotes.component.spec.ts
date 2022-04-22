@@ -1,4 +1,5 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
+import { MatDialogModule } from '@angular/material/dialog';
 
 import { DisplaynotesComponent } from './displaynotes.component';
 
@@ -8,7 +9,8 @@ describe('DisplaynotesComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ DisplaynotesComponent ]
+      declarations: [ DisplaynotesComponent ],
+      imports:[MatDialogModule]
     })
     .compileComponents();
   });
