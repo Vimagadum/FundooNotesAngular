@@ -29,4 +29,8 @@ describe('ArchiveComponent', () => {
     component.getArchiveArray()
     expect(component.getArchiveArray).toBeTruthy();
   });
+  it('receiveMessagefromdisplaycard',()=>{
+    component.receiveMessagefromdisplaycard(2)
+    expect(component.receiveMessagefromdisplaycard).toBeTruthy();
+  });
 });

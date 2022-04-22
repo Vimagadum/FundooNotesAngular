@@ -25,4 +25,12 @@ describe('TrashComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('getTrashArray',()=>{
+    component.getTrashArray()
+    expect(component.getTrashArray).toBeTruthy();
+  });
+  it('receiveMessagefromdisplaycard',()=>{
+    component.receiveMessagefromdisplaycard(2)
+    expect(component.receiveMessagefromdisplaycard).toBeTruthy();
+  });
 });

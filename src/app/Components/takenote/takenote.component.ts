@@ -13,7 +13,7 @@ export class TakenoteComponent implements OnInit {
   description:string = ""
   title:string=""
   reminder:string="2022-04-11T11:27:12.305Z"
-  color:string="red"
+  color:string="white"
   image:string="image1.jpg"
   isarchive:boolean=false;
   ispin:boolean=false;

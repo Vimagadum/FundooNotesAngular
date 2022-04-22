@@ -24,4 +24,20 @@ describe('GetallnotesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('getnote',()=>{
+    component.getnote()
+    expect(component.getnote).toBeTruthy();
+  });
+  it('updatedData',()=>{
+    component.updatedData(2)
+    expect(component.updatedData).toBeTruthy();
+  });
+  it('receiveEvent',()=>{
+    component.receiveEvent(2)
+    expect(component.receiveEvent).toBeTruthy();
+  });
+  it('receiveMessagefromdisplaycard',()=>{
+    component.receiveMessagefromdisplaycard(2)
+    expect(component.receiveMessagefromdisplaycard).toBeTruthy();
+  });
 });

@@ -24,4 +24,8 @@ describe('TakenoteComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('noteClose',()=>{
+    component.noteClose()
+    expect(component.noteClose).toBeTruthy();
+  });
 });

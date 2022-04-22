@@ -11,6 +11,7 @@ describe('DisplaynotesComponent', () => {
     await TestBed.configureTestingModule({
       declarations: [ DisplaynotesComponent ],
       imports:[MatDialogModule]
+      
     })
     .compileComponents();
   });
@@ -24,4 +25,5 @@ describe('DisplaynotesComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  
 });

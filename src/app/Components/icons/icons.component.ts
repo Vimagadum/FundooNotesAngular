@@ -59,7 +59,7 @@ export class IconsComponent implements OnInit {
       console.log(res);
       this.iconstodisplay.emit(res) 
       
-    })    
+    })     
   }
   onDeleteForever(){
     this.noteId=[this.noteObject.notesId]

@@ -3,7 +3,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { DashboardComponent } from './dashboard.component';
 
-fdescribe('DashboardComponent', () => {
+describe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
 
@@ -40,4 +40,5 @@ fdescribe('DashboardComponent', () => {
     component.view()
     expect(component.view).toBeTruthy();
   });
+  
 });
