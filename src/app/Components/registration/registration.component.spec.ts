@@ -25,4 +25,12 @@ describe('RegistrationComponent', () => {
   it('should create', () => {
     expect(component).toBeTruthy();
   });
+  it('register',()=>{
+    component.onSubmit()
+    expect(component.onSubmit).toBeTruthy();
+  });
+  it('pass',()=>{
+    component.showPassword()
+    expect(component.showPassword).toBeTruthy();
+  });
 });
