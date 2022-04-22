@@ -3,14 +3,14 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { DashboardComponent } from './dashboard.component';
 
-describe('DashboardComponent', () => {
+fdescribe('DashboardComponent', () => {
   let component: DashboardComponent;
   let fixture: ComponentFixture<DashboardComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       declarations: [ DashboardComponent ],
-      imports:[RouterTestingModule]
+      imports:[RouterTestingModule] 
     })
     .compileComponents();
   });
@@ -23,5 +23,21 @@ describe('DashboardComponent', () => {
 
   it('should create', () => {
     expect(component).toBeTruthy();
+  });
+  it('logout',()=>{
+    component.logout()
+    expect(component.logout).toBeTruthy();
+  });
+  it('listview',()=>{
+    component.listview()
+    expect(component.listview).toBeTruthy();
+  });
+  it('gridview',()=>{
+    component.gridview()
+    expect(component.gridview).toBeTruthy();
+  });
+  it('view',()=>{
+    component.view()
+    expect(component.view).toBeTruthy();
   });
 });
